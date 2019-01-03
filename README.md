@@ -21,7 +21,7 @@ WARNING!
 Compiling fb-rotate
 -------------------
 
-Assuming you have Xcode installed, you can compile the C-code yourself on any Mac OS from 10.3 to 10.11. 
+Assuming you have Xcode installed, you can compile the C-code yourself on any Mac OS from 10.3 to 10.11.
 
 In the Terminal app, after you've changed the current directory to the one `fb-rotate.c` is stored, using
 
@@ -42,11 +42,11 @@ The l-option (list):
      fb-rotate -l
 
 will list the display id's, e.g. in Terminal,
- 
+
      $ ./fb-rotate -l
      Display ID       Resolution
      0x19156030       1280x800                  [main display]
-     0x76405c2d       1344x1008 
+     0x76405c2d       1344x1008
 
 The i-option (info):
 
@@ -92,7 +92,7 @@ will rotate the display with the indicated ID back to the standard orientation, 
 
 (Again, you can also rotate to the 90, 180 and 270 degree orientations.)
 
-Further, there are shortcuts: 
+Further, there are shortcuts:
 
 When using the `-d` option,
 
@@ -129,7 +129,7 @@ Downloads
 Caveats
 -------
 
-Warning: Some white MacBooks (2006-2008), namely those using Intel's integrated graphics, have difficulty rotating to the 90º or 270º orientations and the resulting display may be difficult to use. 
+Warning: Some white MacBooks (2006-2008), namely those using Intel's integrated graphics, have difficulty rotating to the 90º or 270º orientations and the resulting display may be difficult to use.
 
 Installation
 ------------
@@ -137,15 +137,19 @@ Installation
 2. copy the fb-rotate and rotate.sh files to this folder
 3. Take the com.hackintosh.fb-rotate.plist file and place it under /Library/LaunchAgents
 4. run the following command to change owner and group on the file:
-sudo chown root:wheel /Library/LaunchDaemons/com.hackintosh.fb-rotate.plist
-5. If it doesnt work for you add the following lined to the com.hackintosh.fb-rotate.plist before the </dict>
-<key>StandardErrorPath</key>
-<string>/tmp/com.hackintosh.fb-rotate.plist.err</string>
-<key>StandardOutPath</key>
-<string>/tmp/com.hackintosh.fb-rotate.plist.out</string>
-6. look at content of these files which will be located under /tmp folder after reboot for why it didnt work 
 
-Credits and License 
+    sudo chown root:wheel /Library/LaunchDaemons/com.hackintosh.fb-rotate.plist
+
+5. If it doesnt work for you add the following lined to the com.hackintosh.fb-rotate.plist before the </dict>
+
+    <key>StandardErrorPath</key>
+    <string>/tmp/com.hackintosh.fb-rotate.plist.err</string>
+    <key>StandardOutPath</key>
+    <string>/tmp/com.hackintosh.fb-rotate.plist.out</string>
+
+6. look at content of these files which will be located under /tmp folder after reboot for why it didnt work
+
+Credits and License
 -------------------
 
 The original code for fb-rotate comes from a programming example in
@@ -157,5 +161,3 @@ Changes were made by [Eric Nitardy][ericn] (© 2010) which have to be made avail
 [ericn]: http://cdlbb.github.com
 [fb-rotate]: http://modbookish.lefora.com/topic/3513246/A-Unix-Utility-to-Change-the-Primary-Display-on-OSX/
 [Modbook]: http://www.modbook.com
-
-
