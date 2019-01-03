@@ -131,6 +131,19 @@ Caveats
 
 Warning: Some white MacBooks (2006-2008), namely those using Intel's integrated graphics, have difficulty rotating to the 90º or 270º orientations and the resulting display may be difficult to use. 
 
+Installation
+------------
+1. create a common folder under the /Users folder i.e. /Users/common/
+2. copy the fb-rotate and rotate.sh files to this folder
+3. Take the com.hackintosh.fb-rotate.plist file and place it under /Library/LaunchAgents
+4. run the following command to change owner and group on the file:
+sudo chown root:wheel /Library/LaunchDaemons/com.hackintosh.fb-rotate.plist
+5. If it doesnt work for you add the following lined to the com.hackintosh.fb-rotate.plist before the </dict>
+<key>StandardErrorPath</key>
+<string>/tmp/com.hackintosh.fb-rotate.plist.err</string>
+<key>StandardOutPath</key>
+<string>/tmp/com.hackintosh.fb-rotate.plist.out</string>
+6. look at content of these files which will be located under /tmp folder after reboot for why it didnt work 
 
 Credits and License 
 -------------------
